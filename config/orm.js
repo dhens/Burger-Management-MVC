@@ -17,4 +17,28 @@ const printQuestionMarks = (num) => {
     return arr.toString();
 }
 
+const orm = {
+    all: (tableInput, callback) => {
+        const queryString = `select * from ${tableInput};`
+        connection.query(queryString, (err, res) => {
+            if (err) {
+                throw err;
+            }
+            callback(result);
+        })
+    },
+    create: (table, cols, vals, callback) => {
+        const queryString = `insert into ${table}(${cols.toString()}) values (${printQuestionMarks(vals.length)})`;
+        console.log(queryString); 
+
+        connection.query(queryString, (err, results) => {
+            if (err) {
+                throw err;
+            }
+
+            callback(results)
+        })
+    }
+}
+
 module.exports = orm;
