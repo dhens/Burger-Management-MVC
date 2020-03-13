@@ -41,7 +41,7 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 const orm = {
-  all: function(tableInput, cb) {
+  selectAll: function(tableInput, cb) {
     const queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
@@ -50,15 +50,9 @@ const orm = {
       cb(result);
     });
   },
-  create: function(table, cols, vals, cb) {
-    const queryString = "INSERT INTO " + table;
-
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
+  insertOne: function(table, cols, vals, cb) {
+    const queryString = 
+        `INSERT INTO + table (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)})`
 
     console.log(queryString);
 
@@ -71,13 +65,9 @@ const orm = {
     });
   },
   // An example of objColVals would be {name: panther, sleepy: true}
-  update: function(table, objColVals, condition, cb) {
-    const queryString = "UPDATE " + table;
-
-    queryString += " SET ";
-    queryString += objToSql(objColVals);
-    queryString += " WHERE ";
-    queryString += condition;
+  updateOne: function(table, objColVals, condition, cb) {
+    const queryString = 
+        `UPDATE + table SET ${objToSql(objColVals)} WHERE ${condition}}`
 
     console.log(queryString);
     connection.query(queryString, function(err, result) {

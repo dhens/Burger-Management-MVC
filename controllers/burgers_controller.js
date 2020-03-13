@@ -6,7 +6,7 @@ const burger = require('../models/burger');
 
 // Create all our routes and set up logic within those routes where required
 router.get('/', (req, res) => {
-    burger.all( (data) => {
+    burger.selectAll( (data) => {
         const hbsObject = {
             burgers: data
         }
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     })
 });
 
-// router.post
+router.post
 
 // Export routes for server.js to read and use
 module.exports = router;
