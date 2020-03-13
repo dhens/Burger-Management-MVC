@@ -8,7 +8,7 @@ const burger = {
     },
 
     create: (cols, vals, callback) => {
-        orm.createOne('burgers', cols, vals, (res) => {
+        orm.insertOne('burgers', cols, vals, (res) => {
             callback(res)
         });
     },

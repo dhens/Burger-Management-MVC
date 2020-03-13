@@ -1,14 +1,24 @@
-<img src="/assets/img/burger.png">
+<img src="/assets/img/burger.png" alt="Cartoon Burger">
 <h1>Eat-Da-Burger</h1>
-
-<textarea cols="20" rows="2"></textarea>
-<button type="submit">Submit</button>
-<p>Enter a burger you want to eat! Click the submit button.</p>
 
 <ul>
     {{#each burgers}}
-        <li>
-            <p>{{this.id}}. {{this.burger_name}}</p>
-        </li>
+        {{#unless devoured}}
+                <li>
+                    <textarea cols="20" rows="1">{{this.id}}. {{this.burger_name}}</textarea>
+                    <button class="devour-burger" data-id="{{this.id}}">Devour!</button>
+                </li>
+        {{/unless}}
     {{/each}}
 </ul>
+
+<form class="create-form">
+
+  <div class="form-group">
+    <textarea id="burg" cols="20" rows="2"></textarea>
+    <button type="submit">Submit</button>
+    <p>Enter a burger you want to eat! Click the submit button.</p>
+  </div>
+
+</form>
+
