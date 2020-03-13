@@ -3,7 +3,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 // A 'route' for all static content such as css, imgs, and other, whenever a link to an external file is called
-app.use(express.static('public'))
+app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
