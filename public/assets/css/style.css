@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: yellow;
+}
+
+.label {
+    padding: 20px;
+    background-color: tan;
+}
