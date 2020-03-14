@@ -2,14 +2,24 @@
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-}
-
 body {
-    height: 100%;
     background-color: yellow;
 }
+
+#grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  
+#grid-container > li {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
 
 li button {
     margin-left: 10px;
@@ -17,15 +27,14 @@ li button {
     margin-top: 12.5px;
 }
 
-ul {
-    display: flex;
-    flex-direction: column;
+/* ul {
+    display: grid;
     padding: 0px;
-}
+    width: 25%;
+    margin-left: 20%;
+} */
 
 li {
-    display: flex;
-    flex-direction: row;
     margin-top: 5px;
     margin-left: 0px;
     background: wheat;
