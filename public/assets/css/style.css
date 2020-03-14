@@ -11,7 +11,22 @@ body {
     background-color: yellow;
 }
 
-.label {
-    padding: 20px;
-    background-color: tan;
+li button {
+    margin-left: 10px;
+    height: 25px;
+    margin-top: 12.5px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-left: 0px;
+    background: wheat;
 }

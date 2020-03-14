@@ -12,7 +12,7 @@ $( () => {
     $('.create-form').on('submit', (event) => {
         event.preventDefault();
         const newBurger = {
-            burger_name: $('#burg').val().trim()
+            burger_name: $('#burg').val().trim(),
         }
         $.ajax('api/burgers', {
             type: 'POST',
