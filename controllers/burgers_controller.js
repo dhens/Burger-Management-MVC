@@ -22,5 +22,13 @@ router.post('/api/burgers', (req, res) =>  {
     });
 });
 
+router.put('/api/burgers/:id', (req, res) => {
+    const condition = req.params.id
+    burger.update(['devoured' condition],
+    [req.body.devoured, condition], (result) => {
+        location.reload();
+    })
+})
+
 // Export routes for server.js to read and use
 module.exports = router;

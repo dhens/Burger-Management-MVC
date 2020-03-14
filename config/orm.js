@@ -65,12 +65,13 @@ const orm = {
     });
   },
   // An example of objColVals would be {name: panther, sleepy: true}
-  updateOne: function(table, objColVals, condition, cb) {
+  updateOne: (table, objColVals, condition, cb) => {
+    // console.log(`table: ${table},\n objColVals:${objColVals},\n condition:${condition}\n`)
     const queryString = 
-        `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}}`
+        `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`
 
     console.log(queryString);
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, (err, result) => {
       if (err) {
         throw err;
       }
