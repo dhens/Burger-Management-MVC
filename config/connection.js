@@ -10,6 +10,7 @@ if (process.eventNames.JAWSDB_URL) {
         password: 'toor',
         database: 'burgers_db'
     });    
+}
 
 connection.connect( (err) => {
     if (err) {
