@@ -1,5 +1,5 @@
 const express = require('express');
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 const app = express();
 
 // A 'route' for all static content such as css, imgs, and other, whenever a link to an external file is called
