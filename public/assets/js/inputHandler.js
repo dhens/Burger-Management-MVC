@@ -26,7 +26,6 @@ $( () => {
             type: 'POST',
             data: newBurger
         }).then( () => {
-            console.log('Created new burger')
             location.reload();
         })
     })    

@@ -54,8 +54,6 @@ const orm = {
     const queryString = 
         `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)})`
 
-    console.log(queryString);
-
     connection.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
@@ -70,7 +68,6 @@ const orm = {
     const queryString = 
         `UPDATE ${table} SET ${objToSql(objColVals)} WHERE id=${condition}`
 
-    console.log(queryString);
     connection.query(queryString, (err, result) => {
       if (err) {
         throw err;
