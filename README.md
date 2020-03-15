@@ -1,6 +1,6 @@
 # A Burger Managing app - Developed with MVC architecture
 
-### A Full-Stack Express, Handlebars, and MySQL web-app to create and devour tasty burgers created by the user.
+### A Full-Stack Node, Express, Handlebars, and MySQL web-app to create and devour tasty burgers created by the user.
 ![bannerPic](bannerPic.PNG)
 
 ### Live Demo
