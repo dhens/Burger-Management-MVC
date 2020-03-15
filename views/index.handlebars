@@ -1,32 +1,31 @@
-<img src="/assets/img/burger.png" alt="Cartoon Burger">
-<h1>Eat-Da-Burger</h1>
-
-<div id="grid-container">
-    <div class="not-devoured">
-        <ul>
-            {{#each burgers}}
-                {{#unless devoured}}
-                        <li>
-                            <div class="burgeritem">{{this.id}}. {{this.burger_name}}</div>
-                            <button class="devour-burger" data-id="{{this.id}}">Devour!</button>
-                        </li>
-                {{/unless}}
-            {{/each}}
-        </ul>
+    <div class="header">
+        <img src="/assets/img/burger.png" alt="Cartoon Burger">
+        <h1>Eat-Da-Burger</h1>
     </div>
-</div>
+    <div class="container">
+        <div class="not-devoured">
+            <ul>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                            <li>
+                                <div class="burgeritem">{{this.id}}. {{this.burger_name}}</div>
+                                <button class="devour-burger" data-id="{{this.id}}">Devour!</button>
+                            </li>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
 
-<div id="grid-container">
-    <div class="devoured">
-        <ul>
-            {{#each burgers}}
-                {{#if devoured}}
-                    <div>{{this.id}}. {{this.burger_name}} - Devoured</div>
-                {{/if}}
-            {{/each}}
-        </ul>
+        <div class="devoured">
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                        <li>{{this.id}}. {{this.burger_name}} - Devoured </li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
-</div>
 
 <form class="create-form">
 
