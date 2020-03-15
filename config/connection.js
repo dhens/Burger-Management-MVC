@@ -3,7 +3,7 @@ const PORT = process.env.PORT;
 
 let connection;
 
-if (process.eventNames.JAWSDB_URL) {
+if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
     connection = mysql.createConnection({
