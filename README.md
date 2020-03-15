@@ -11,6 +11,8 @@
 
 ## This repo contains:
 * An MVC stucture
+* An Express web server
+* A MySQL schema for storing burger information
 * Handlebars-run front end
 * A Home-made ORM 
 * URL routing 
