@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
         const hbsObject = {
             burgers: data
         }
-        console.log(hbsObject);
+        console.log('Serving all burgers!');
         res.render('index', hbsObject)
     })
 });
@@ -23,10 +23,15 @@ router.post('/api/burgers', (req, res) =>  {
 });
 
 router.put('/api/burgers/:id', (req, res) => {
-    const condition = req.params.id
-    burger.update(['devoured' condition],
-    [req.body.devoured, condition], (result) => {
-        location.reload();
+    const condition = req.params.id;
+    burger.update({
+        devoured: 1
+    }, condition, (result) => {
+        if (result.changedRow === 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
     })
 })
 

@@ -19,9 +19,9 @@
 <div id="grid-container">
     <div class="devoured">
         <ul>
-            {{#each burger}}
+            {{#each burgers}}
                 {{#if devoured}}
-                    <div>{{this.id}}. {{this.burger_name}}</div>
+                    <div>{{this.id}}. {{this.burger_name}} - Devoured</div>
                 {{/if}}
             {{/each}}
         </ul>

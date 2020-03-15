@@ -68,7 +68,7 @@ const orm = {
   updateOne: (table, objColVals, condition, cb) => {
     // console.log(`table: ${table},\n objColVals:${objColVals},\n condition:${condition}\n`)
     const queryString = 
-        `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`
+        `UPDATE ${table} SET ${objToSql(objColVals)} WHERE id=${condition}`
 
     console.log(queryString);
     connection.query(queryString, (err, result) => {

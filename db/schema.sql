@@ -1,3 +1,5 @@
+use h1frmgzbg4o8f51v;
+
 create database burgers_db;
 
 use burgers_db;
