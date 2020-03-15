@@ -3,6 +3,9 @@
 ### A Full-Stack Express, Handlebars, and MySQL web-app to create and devour tasty burgers created by the user.
 ![bannerPic](bannerPic.PNG)
 
+### Live Demo
+https://blooming-brook-63608.herokuapp.com
+
 ## Installation:
 1. Clone repo to your local machine
 2. Run "npm install" in the directory of the cloned repo
